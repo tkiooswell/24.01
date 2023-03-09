@@ -1,0 +1,57 @@
+//1
+#include <string>
+#include <iostream>
+using namespace std;
+ 
+class Animal
+{
+protected:
+    string name;
+public:
+    Animal(string name)
+        : name(name)
+    {
+    }
+ 
+    virtual void Say() = 0;
+    
+};
+ 
+class Dog : public Animal
+{
+public:
+    Dog(string name) : Animal(name)
+    {
+    }
+ 
+    void Say() 
+    {
+        cout << name << " gav-gav" << endl;
+    }
+};
+ 
+class Cat : public Animal
+{
+public:
+    Cat(string name) : Animal(name)
+    {
+    }
+ 
+    void Say() 
+    {
+        cout << name << " meow-meow" << endl;
+    }
+};
+ 
+class Parrot : public Animal
+{
+public:
+Parrot(string name) : Animal(name)
+    {
+    }
+ 
+    void Say() 
+    {
+        cout << name << "piu-piu" << endl;
+    }
+};
